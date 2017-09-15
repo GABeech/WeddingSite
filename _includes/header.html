@@ -1,29 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">G&ampS</a>
 
-<div class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">G&ampS</a>
-    </div>
-    
-        <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Venue</a></li>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarContent" aria-controls="navBarContent"
+    aria-expanded="false" aria-label="toggle">
+            <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-expand-lg" id="navBarContent">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Venue</a>
     </div>
   </div>
+</nav>
+
+
+<div class="jumbotron jubotron-fluid">
+  <div class="container">
+    <h1 class="display-3">George &amp Sara</h1>
+    <p class="lead">We're Getting Hitch, join #teambeechhaus for our party!</p>
+  </div>
+  <div id="carouselPictures" class="carousel slide">
+    <div class="carousel-inner">
+      {% for image in site.static_files %} {% if image.path contains 'images/carousel' %} {% unless first_loop %}
+      <div class="carousel-item img-fluid active">
+        <img class="d-block w-100 h-50" src="{{ image.path }}" alt="Slide">
+      </div>
+      {% assign first_loop = true %} {% continue %} {% endunless %}
+      <div class="carousel-item img-fluid">
+        <img class="d-block w-100 h-50" src="{{ image.path }}" alt="Slide">
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+  <script type="text/javascript">
+    $('#carouselPictures').carousel();
+  </script>
 </div>
-  <div class="jumbotron jubotron-fluid">
-    <div class="container">
-      <h1 class="display-3">George &amp Sara</h1>
-      <p class="lead">We're Getting Hitch, join #teambeechhaus for our party!</p>
-    </div>
-  </div>
-
