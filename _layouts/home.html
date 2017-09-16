@@ -3,10 +3,16 @@ layout: default
 ---
 {% for i in site.info %}
 
+<div class="card">
+  <h3 class="card-header">
+      {{ i.Title }}
+  </h3>
+  <div class="card-block">
+    <p class="card-text">
+      {{i.content}}
+    </p>
+  </div>
+</div>
 
-<h1 class="display-2">
-  {{ i.Title }}
-</h1>
-{{i.content}}  
 
 {% endfor %}

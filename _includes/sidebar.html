@@ -1,8 +1,14 @@
+<ul class="list-group less-pad">
 {% for i in site.info %}
 
 
 
-<a href="#">{{ i.Title }}</a>  
-<br />
+<li class="list-group-item border-0 less-pad">
+    <button type="button" class="btn btn-outline-info">
+        <a href="#">{{ i.Title }}</a>
+    </button>
+</li> 
+
 
 {% endfor %}
+</ul>

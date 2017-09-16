@@ -4,18 +4,24 @@
 {% include head.html %}
 
 <body>
+  {% include nav.html %}
   <div class="container">
     {% include header.html %}
-
+{% if page.path == 'index.md' %}
     <div class="row">
-      <div class="col-lg-9">
+      <div class="col-md-9">
         {{ content }}
       </div>
       <div class="col">
         {%include sidebar.html %}
       </div>
     </div>
-
+{% else %}
+<div class="row">
+    <div class="col">
+      {{ content }}
+    </div>
+{% endif %}
     {% include footer.html %}
   </div>
 </body>
