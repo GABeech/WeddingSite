@@ -1,14 +1,14 @@
 <ul class="list-group less-pad">
-{% for i in site.info %}
+    {% for i in site.info %}
 
 
 
-<li class="list-group-item border-0 less-pad">
-    <button type="button" class="btn btn-outline-info">
-        <a href="#">{{ i.Title }}</a>
+    <li class="list-group-item border-0 less-pad">
+        <button type="button" class="btn btn-outline-info">
+        <a href="#{{i.anchor}}">{{ i.Title }}</a>
     </button>
-</li> 
+    </li>
 
 
-{% endfor %}
+    {% endfor %}
 </ul>
