@@ -18,12 +18,22 @@
     //}
   }
 
+body {
+    font-family: futura, sans-serif;
+}
 .bg-green {
-    background-color: #15BA84 !important;
+    background-color: #BCCAB3 !important;
 }
 
 .card-header {
     background-color: #FCDBD4;
+    font-family: 'Dancing Script', cursive !important;  
+    color: gray;  
+    
+}
+.jumbotron {
+    //background-color: #00908B;
+    //color: #DCB766;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: #000000;
