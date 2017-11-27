@@ -5,19 +5,66 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/main.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script>
 
-
-
+  
+  <link rel="icon" href="images/favicon.jpg">
+  <!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css" media="screen" />
+  <!-- Pace -->
+  <link rel="stylesheet" href="css/preloader.css"  media="screen">
+  <!-- Flexslider -->
+  <link rel="stylesheet" href="css/flexslider/flexslider.css" type="text/css">
+  <!-- Animate -->
+  <!--<link rel="stylesheet" href="css/animate/animate.css" type="text/css">       -->
+  <!-- Countdown -->
+  <link rel="stylesheet" href="css/countdown/jquery.countdown.css" type="text/css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" type="text/css">
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="css/owlcarousel/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="css/owlcarousel/owl.theme.css" type="text/css">
+  <!-- Icon -->
+  <link rel="stylesheet" href="css/fonts/fontello/css/fontello.css" type="text/css" media="screen" />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+  <!-- Theme CSS -->
+<link href="css/style.css" rel="stylesheet" media="screen">
+  <!-- jQuery -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <!-- Pace -->
+  <script src="js/pace/pace.min.js"></script> 
+<!-- Bootstrap -->
+<script src="js/bootstrap/bootstrap.min.js"></script>  	
+  <!-- Device JS -->
+  <script src="js/devicejs/device.min.js"></script>  
+  <!-- SmoothScroll -->
+  <script src="js/smoothscroll/jquery.smooth-scroll.min.js"></script>
+  <!-- Flexslider -->
+  <script src="js/flexslider/jquery.flexslider-min.js"></script> 
+  <!-- Waypoint -->
+  <script src="js/waypoint/jquery.waypoints.min.js"></script>
+  <!-- DoubleTapToGo -->
+  <script src="js/jquery-ui-widget/jquery.ui.widget.min.js"></script>
+  <script src="js/jquery-doubletaptogo/jquery.dcd.doubletaptogo.min.js"></script>
+  <!-- Stellar -->
+  <script src="js/stellar/jquery.stellar.min.js"></script>
+  <!-- Masonry -->
+  <script src="js/masonry/masonry.pkgd.min.js"></script>
+  <!-- Countdown -->
+  <script src="js/countdown/jquery.plugin.min.js"></script>
+  <script src="js/countdown/jquery.countdown.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Owl Carousel -->
+  <script src="js/owlcarousel/owl.carousel.min.js"></script>
+  
+  <!-- Custom Core Script -->
+  <script type="text/javascript" src="js/script.js"></script>        
+  <!-- Custom Additional Script -->
+  <script type="text/javascript" src="js/main-slider-fade.js"></script>   
+  <link rel="stylesheet" href="/css/main.css" media="screen">
+  
   {% if jekyll.environment == 'production' and site.google_analytics %} {% include google-analytics.html %} {% endif %}
 </head>

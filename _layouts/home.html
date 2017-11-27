@@ -1,12 +1,38 @@
---- 
-layout: default 
---- 
+---
+---
+ {% include head.html %}
 
+<body>
+  {% include nav.html %}
+  <section id="content">
+
+
+    <section id="top-photo" class="section-block more-grey">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h4 class="our-name">George
+              <span class="and-name">and</span> Sara</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 gallery-item text-center">
+            <img src="/assets/images/Image4.png" alt="George and Sara">
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+</body>
+
+<!--
 {% for i in site.info %}
 
-<div class="card">
-  <h3 class="card-header" id="{{i.anchor}}">
-    {{ i.Title }}
+<div class="card border-0">
+  <h3 class="card-header">
+      {{ i.Title }}
   </h3>
   <div class="card-block">
     <p class="card-text">
@@ -17,3 +43,4 @@ layout: default
 
 
 {% endfor %}
+-->
