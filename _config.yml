@@ -25,7 +25,7 @@ url: "http://wedding.beechhaus.com" # the base hostname & protocol for your site
 #collections
 collections:
   info:
-    output: false
+    output: true
 # Build settings
 markdown: kramdown
 

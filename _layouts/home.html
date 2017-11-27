@@ -1,6 +1,6 @@
----
----
- {% include head.html %}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include head.html %}
 
 <body>
   {% include nav.html %}
@@ -16,9 +16,22 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 gallery-item text-center">
-            <img src="/assets/images/Image4.png" alt="George and Sara">
+          <div class="photo-item animation fadeIn">
+            <div class="col-md-6 gallery-item animation fadeInUp text-center">
+              <div class="photo-item animation fadeIn">
+                <img src="/assets/images/Image4.png" alt="George and Sara" class="hover-animation image-zoom-in">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 text-center">
+              <h2 class="h4 animation fadeInUp">We are getting Married!</h2>
+              <p class="intro-text animation fadeInUp">
+                We look forward to spending the day with our friends and family, celebrating our wedding.
+              </p>                                   
 
+                <div id="countdown" class="countdown circle-countdown animation fadeInUp"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
