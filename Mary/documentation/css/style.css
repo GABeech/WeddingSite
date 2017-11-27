@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+/*============================== 
+	- Template Name: MARRY - HTML Wedding Template Documentations
+	- Author: DoubleEight
+	- Version: 1.0
+	- Website: www.dethemes.com
+================================= */	
+
+/*---------------------- 
+	Stylesheet Guide
+------------------------
+01. GENERAL
+02. NAVIGATION
+03. CONTENT	*/
+
+
+/* =================================================== */
+/* 01. GENERAL  	 		                           */
+/* =================================================== */
+
+body {
+	font-family: 'Raleway', sans-serif;	
+	color:#666;
+	font-size:16px;
+	line-height:27px;
+	padding:0;
+	margin:0;
+	background-color: #fafafa;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+	color:#333333;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, 
+h4 a:hover, h5 a:hover, h6 a:hover{
+	color:#f0394d;
+}
+
+h1, h2, h3,
+.h1, .h2, .h3{
+	 margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h4, h5, h6
+.h4, .h5, .h6{
+	 margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1, .h1{
+	font-size:36px;
+}
+
+h2, .h2{
+	font-size:24px;
+}
+
+h3, .h3{
+	font-size:18px;
+}
+
+h4, .h4{
+	font-size:16px;
+}
+
+h5, .h5{
+  font-size: 14px;
+}
+
+h6, .h6{
+  font-size: 12px;
+}
+
+h1.inline, h2.inline, h3.inline,
+h4.inline, h5.inline, h6.inline{
+	display:inline;
+	vertical-align:middle; 
+}
+
+p{
+	font-family: 'Raleway', sans-serif;	
+	font-size:16px;
+	line-height:27px;
+}
+
+p.lead{
+	font-size:19px;
+	line-height:28px;
+	font-weight:normal;
+}
+
+a{
+	color:#6a6a6a;
+	text-decoration: underline;
+}
+
+a:hover{
+	color:#f0394d;
+}
+
+.clearboth{
+	clear:both;
+}
+
+.no-padding{
+	padding:0;
+}
+
+.no-margin{
+	margin:0;
+}
+
+img{
+	margin:10px 0 20px 0;
+}
+
+img.fullwidth{
+	width:100%;
+}
+
+img.with-border{
+	border:1px solid #6a6a6a;
+}
+
+/* =================================================== */
+/* 02. NAVIGATION	 		                           */
+/* =================================================== */
+
+nav.navigation {
+	width: 320px; 
+    overflow: hidden;
+    position: fixed; 
+    top: 0px;
+    background: #FFF;
+    height: 100%;
+    padding-top: 60px;
+	z-index:1000;
+	padding:30px;
+}
+
+nav.navigation ul {
+	list-style-type:none;
+    padding: 0px; 
+	margin: 0;
+	height:85%;
+	overflow:auto;
+}
+
+nav.navigation ul li a {
+	font-size: 14px;
+  	line-height: 20px;
+  	font-family: 'Montserrat', sans-serif;
+  	color: #666666;
+    text-decoration: none; 
+	display:block;
+	border-bottom:1px solid #CCC;
+	padding:5px 0;
+	width:90%;
+	position:relative;
+}
+
+nav.navigation ul li a:after{
+	font-family: 'Raleway', sans-serif;	
+	content:"+";
+	position:absolute;
+	right:0;
+}
+
+nav.navigation ul li a.expand:after{
+	font-family: 'Raleway', sans-serif;	
+	content:"-";
+	position:absolute;
+	right:0;
+}
+
+nav.navigation ul li a:only-child:after{
+	content:"";
+}
+
+nav.navigation ul li a:hover {
+    color: #f0394d;
+}
+
+nav.navigation ul li ul{
+	display:none;
+}
+
+nav.navigation ul li ul.open {
+    display:block;
+}
+
+nav.navigation ul li ul li a{
+	border-bottom:none;
+	padding-left:15px;
+}
+
+
+/*========================*/
+/* 03. CONTENT      	  */
+/*========================*/
+section.content { 
+	padding-left: 380px; 
+	padding-right: 100px;
+	padding-top:40px;
+	padding-bottom:40px;
+	background-color: #f6f6f6;
+}
+
+section.content > h2 {
+    margin-top: 0px;
+}
+
+section.content > div{
+    margin-top: 50px;
+}
+
+ul {
+	list-style-type:none;
+	padding:0;
+}
+
+
+.guide-title{
+	border-bottom:1px solid #CCC; 
+	padding-bottom:20px;
+
+}
+
+.guide-section{
+	margin:50px 0;
+}
+
+.guide-section-title{
+	background-color:#EEE; 
+	padding:20px; 
+	margin-bottom:30px;
+	margin-top:80px;
+}
+
+.guide-section-content{
+	margin-left:20px;
+}

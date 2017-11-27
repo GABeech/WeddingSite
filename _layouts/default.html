@@ -5,17 +5,24 @@
 
 <body>
   {% include nav.html %}
-  <div class="container">
-    {% include header.html %}
+  <section id="content">
+    <div id="container">
+      
+    
+    
 {% if page.path == 'index.md' %}
+<section id="couple-section" class="section-block">
     <div class="row">
-      <div class="col-md-9">
-        {{ content }}
-      </div>
+        <div class="col-md-9">
+          {{ content }}
+        </div>
       <div class="col">
         {%include sidebar.html %}
       </div>
     </div>
+    </section>
+</section>
+    
 {% else %}
 <div class="row">
     <div class="col">
