@@ -1,13 +1,18 @@
-
-.our-name{
-	font-family: 'Great Vibes', cursive; 
-  font-size:95px;
+.our-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 95px;
   padding: 50px;
 }
-.and-name{
-	font-family: 'Great Vibes', cursive; 
-	font-size:54px; 
-	margin-top:30px;
+
+.and-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 54px;
+  margin-top: 30px;
+}
+
+.bridal-party {
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
 }
 
 .bridal-party-title {
@@ -19,6 +24,11 @@
   padding: 150px 0;
 }
 
-.content-block{
+.content-block {
   padding: 150px 0;
+}
+
+.honor-border {
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
 }

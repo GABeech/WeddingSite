@@ -96,26 +96,26 @@
 
 		//INFO WINDOWS 1
 		//=======================================================================================
-		var contentString1 = '' +
-			'<div class="info-window-wrapper">' +
-			'<h6>CEREMONY</h6>' +
-			'<div class="info-window-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada aliquam nunc.</div>' +
-			'<div class="info-window-link"><a href="#" class="grey-link with-underline">Click Here</a></div>' +
-			'</div>';
+		//var contentString1 = '' +
+		//	'<div class="info-window-wrapper">' +
+		//	'<h6>CEREMONY</h6>' +
+		//	'<div class="info-window-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada aliquam nunc.</div>' +
+		//	'<div class="info-window-link"><a href="#" class="grey-link with-underline">Click Here</a></div>' +
+		//	'</div>';
 
-		var venueMarker_infowindow = new google.maps.InfoWindow({
-			content: contentString1,
-			maxWidth: 200,
-			pixelOffset: new google.maps.Size(0, -10)
-		});
+		//var venueMarker_infowindow = new google.maps.InfoWindow({
+		//	content: contentString1,
+		//	maxWidth: 200,
+		//	pixelOffset: new google.maps.Size(0, -10)
+		//});
 
 		//OPEN INFO WINDOWS ON LOAD
-		venueMarker_infowindow.open(venueMap, venueMarker);
+		//venueMarker_infowindow.open(venueMap, venueMarker);
 
 		//ON MARKER CLICK EVENTS
-		google.maps.event.addListener(venueMarker, 'click', function () {
-			venueMarker_infowindow.open(venueMap, venueMarker);
-		});
+		//google.maps.event.addListener(venueMarker, 'click', function () {
+		//	venueMarker_infowindow.open(venueMap, venueMarker);
+		//});
 
 		//ON BOUND EVENTS AND WINDOW RESIZE
 		//=======================================================================================
