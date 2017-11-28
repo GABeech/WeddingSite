@@ -40,24 +40,8 @@
 		});
 
 
-		//DEFINE MAP OPTIONS
+		//Venue Map
 		//=======================================================================================
-		/*
-		var mapOptions = {
-			zoom: 16,
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			center: new google.maps.LatLng(35.441921, -97.432528),
-			panControl: true,
-			zoomControl: true,
-			mapTypeControl: true,
-			//scaleControl: false,
-			streetViewControl: true,
-			overviewMapControl: true,
-			//rotateControl:true,			
-			scrollwheel: false,
-
-		};
-		*/
 		var venueMapOptions = {
 			zoom: 16,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -69,16 +53,13 @@
 			streetViewControl: true,
 			overviewMapControl: true,
 			//rotateControl:true,			
-			scrollwheel: false
+			scrollwheel: false,
 
 		};
 
 		//CREATE NEW MAP
 		//=======================================================================================
-		//	var map = new google.maps.Map(document.getElementById('map-canvas-1'), mapOptions);
-		console.log($("#venueMap"));
 		var venueMap = new google.maps.Map(document.getElementById('venueMap'), venueMapOptions);
-		console.log(venueMap);
 
 		//Associate the styled map with the MapTypeId and set it to display.
 		venueMap.mapTypes.set('map_style', styledMap);
@@ -87,66 +68,157 @@
 		//MARKER ICON
 		//=======================================================================================
 		//var image = 'facebook30.svg';
-		// Venue Marker
-		var venueMarker = new google.maps.Marker({
+
+		//ADD NEW MARKER
+		//=======================================================================================		
+		var marker1 = new google.maps.Marker({
 			position: new google.maps.LatLng(40.3374529, -76.4114597),
 			map: venueMap,
-			title: 'Ceremoney and Reception'
-		})
+			title: 'Wedding Ceremony'
+		});
 
+
+		//ADD NEW MARKER WITH LABEL
+		//=======================================================================================
+		/*var marker1 = new MarkerWithLabel({
+       		position: new google.maps.LatLng(35.441921, -97.432528),
+       		draggable: false,
+       		raiseOnDrag: false,
+       		icon: ' ',
+       		map: map, 
+         	labelContent: '<div id="wedding-marker" class="main-icon-wrapper"><div class="big-circle scale-animation"></div><div class="main-icon-text">Wedding</br>Location</div></div>',
+       		labelAnchor: new google.maps.Point(88, 88),
+       		labelClass: "labels" // the CSS class for the label
+     	});
+		
+*/
 		//INFO WINDOWS 1
 		//=======================================================================================
-		//var contentString1 = '' +
-		//	'<div class="info-window-wrapper">' +
-		//	'<h6>CEREMONY</h6>' +
-		//	'<div class="info-window-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada aliquam nunc.</div>' +
-		//	'<div class="info-window-link"><a href="#" class="grey-link with-underline">Click Here</a></div>' +
-		//	'</div>';
+		var contentString1 = '' +
+			'<div class="info-window-wrapper">' +
+			'<h6>CEREMONY</h6>' +
+			'<div class="info-window-desc">Bransenhill Mansion</div>' +
+			'</div>';
 
-		//var venueMarker_infowindow = new google.maps.InfoWindow({
-		//	content: contentString1,
-		//	maxWidth: 200,
-		//	pixelOffset: new google.maps.Size(0, -10)
-		//});
+		var marker1_infowindow = new google.maps.InfoWindow({
+			content: contentString1,
+			maxWidth: 200,
+			pixelOffset: new google.maps.Size(0, -10)
+		});
 
 		//OPEN INFO WINDOWS ON LOAD
-		//venueMarker_infowindow.open(venueMap, venueMarker);
+		marker1_infowindow.open(venueMap, marker1);
 
 		//ON MARKER CLICK EVENTS
-		//google.maps.event.addListener(venueMarker, 'click', function () {
-		//	venueMarker_infowindow.open(venueMap, venueMarker);
-		//});
-
+		google.maps.event.addListener(marker1, 'click', function () {
+			marker1_infowindow.open(venueMap, marker1);
+		});
 		//ON BOUND EVENTS AND WINDOW RESIZE
 		//=======================================================================================
 		google.maps.event.addListener(venueMap, 'bounds_changed', function () {
 			if (is_windowresize) {
 				//map.setCenter(marker.getPosition());
 				window.setTimeout(function () {
-					venueMap.panTo(venueMarker.getPosition());
+					venueMap.panTo(marker1.getPosition());
 				}, 500);
 			}
 			is_windowresize = false;
 		});
 
+		//END VENUE MAP		
 
-		/*
-		Marker with label
-		var marker6 = new MarkerWithLabel({
-       		position: new google.maps.LatLng(35.439997, -97.427630),
-       		draggable: false,
-       		raiseOnDrag: false,
-       		icon: ' ',
-       		map: map, 
-         	labelContent: '<div id="airport-marker" class="de-icon circle medium-size" style="background-color:#797ee6;"><i class="de-icon-airport"></i></div>',
-       		labelAnchor: new google.maps.Point(27, 27),
-       		labelClass: "labels" // the CSS class for the label
-     	});*/
+		//Hotel Map
+		//=======================================================================================
+		var hotelMapOptions = {
+			zoom: 16,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			center: new google.maps.LatLng(40.380347, -76.6666477),
+			panControl: true,
+			zoomControl: true,
+			mapTypeControl: true,
+			//scaleControl: false,
+			streetViewControl: true,
+			overviewMapControl: true,
+			//rotateControl:true,			
+			scrollwheel: false,
+
+		};
+
+		//CREATE NEW MAP
+		//=======================================================================================
+		var hotelMap = new google.maps.Map(document.getElementById('hotelMap'), hotelMapOptions);
+
+		//Associate the styled map with the MapTypeId and set it to display.
+		hotelMap.mapTypes.set('map_style', styledMap);
+		hotelMap.setMapTypeId('map_style');
+
+		//MARKER ICON
+		//=======================================================================================
+		//var image = 'facebook30.svg';
+
+		//ADD NEW MARKER
+		//=======================================================================================		
+		var hotelMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(40.380347, -76.6666477),
+			map: hotelMap,
+			title: 'Hotel'
+		});
 
 
+		//ADD NEW MARKER WITH LABEL
+		//=======================================================================================
+		/*var marker1 = new MarkerWithLabel({
+					position: new google.maps.LatLng(35.441921, -97.432528),
+					draggable: false,
+					raiseOnDrag: false,
+					icon: ' ',
+					map: map, 
+					labelContent: '<div id="wedding-marker" class="main-icon-wrapper"><div class="big-circle scale-animation"></div><div class="main-icon-text">Wedding</br>Location</div></div>',
+					labelAnchor: new google.maps.Point(88, 88),
+					labelClass: "labels" // the CSS class for the label
+			});
 
+		*/
+		//INFO WINDOWS 1
+		//=======================================================================================
+		var hotelString = '' +
+			'<div class="info-window-wrapper">' +
+			'<h6>HOTEL</h6>' +
+			'<div class="info-window-desc">Holiday Inn Harrisburg/Hershey</div>' +
+			'<div class="info-window-link">' +
+			'<a href="https://www.holidayinn.com/redirect?path=hd&brandCode=hi&localeCode=en&regionCode=1&hotelCode=GRVPA&_PMID=99801505&GPC=BWD&viewfullsite=true">Book a Room</a>' +
+			'</div>';
 
+		var hotelMarker_infowindow = new google.maps.InfoWindow({
+			content: hotelString,
+			maxWidth: 200,
+			pixelOffset: new google.maps.Size(0, -10)
+		});
+
+		//OPEN INFO WINDOWS ON LOAD
+		hotelMarker_infowindow.open(hotelMap, hotelMarker);
+
+		//ON MARKER CLICK EVENTS
+		google.maps.event.addListener(hotelMarker, 'click', function () {
+			hotelMarker_infowindow.open(hotelMap, hotelMarker);
+		});
+		//ON BOUND EVENTS AND WINDOW RESIZE
+		//=======================================================================================
+		google.maps.event.addListener(hotelMap, 'bounds_changed', function () {
+			if (is_windowresize) {
+				//map.setCenter(marker.getPosition());
+				window.setTimeout(function () {
+					hotelMap.panTo(hotelMarker.getPosition());
+				}, 500);
+			}
+			is_windowresize = false;
+		});
 	}
+	//END HOTEL MAP		
+
+
+
+
 
 
 
