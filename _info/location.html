@@ -2,27 +2,62 @@
 title: Location 
 anchor: location 
 layout: page 
+map: true
+
 ---
 
 <section id="venue-section" class="section-block more-grey">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-offset-1 col-md-10 text-center">
-            <h2 class="h4 animation fadeInUp">DEFAULT MARKER</h2>
-            <p class="intro-text animation fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada aliquam nunc a pharetra. Pellentesque sit amet placerat magna. Nam ut interdum urna, vitae consequat odio. Nullam porttitor sagittis ex quis venenatis. Duis et neque pharetra, sagittis nisi nec, egestas risus.</p>
-         </div>
+ 	<div class="container">
+   	<div class="row">
+     	<div class="col-md-6 text-center">
+        <h2 class="h4 animation fadeInUp">Ceremony and Reception Venue</h2>
+        <p class="intro-text animation fadeInUp">We will be holding our ceremony and reception at Brasenhill Mansion in Lebanon, PA</p>
       </div>
-    <div class="row">
-       <div class="col-md-12 text-center animation fadeInUp">
-         <div id="venueMap"></div>	                        
-       </div>
+     	<div class="col-md-6 text-center animation fadeInUp">
+    		<div id="venueMap" class="map-canvas-450"></div>	                        
+      </div>
     </div>
   </div>            	
 </section>
 
-
-
- <!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH7lPmmclumcXhfX97lVh2s77YiF38Ns8"></script>
-<script type="text/javascript" src="/js/markerlabel/markerwithlabel.js"></script>
-<script type="text/javascript" src="/js/map-script.js"></script>
+ <section id="location-divider">
+    <div class="image-divider fixed-height" style="background-image:url(/assets/images/BrasenHill.jpg); height:325px" data-stellar-background-ratio="0.5">
+        
+      <div class="divider-overlay"></div>
+      
+      <!--Use Center Middle Alignment to align middle the content for fixed-height parallax-->
+      <div class="alignment"> 
+        <div class="v-align center-middle">                   	
+      
+          <div class="container">                 	 
+            <div class="row">
+            <!--
+                <div class="col-md-offset-1 col-md-10 text-center">
+                    <h3 class="animation fadeInUp">FIXED HEIGHT</h3>
+                      <p class="animation fadeInUp">Height of image divider is fixed. Less / More content will not change the height of the image divider.</p>
+            -->          
+              </div>
+            </div>
+          </div>
+            
+        </div>
+      </div>
+                	
+		</div>		
+</section>
+<section id="hotel-section" class="section-block more-grey">
+ 	<div class="container">
+   	<div class="row">
+     	
+     	<div class="col-md-6 text-center animation fadeInUp">
+    		<div id="hotelMap" class="map-canvas-450"></div>	                        
+      </div>
+      <div class="col-md-6 text-center">
+        <h2 class="h4 animation fadeInUp">Hotel</h2>
+        <p class="intro-text animation fadeInUp">We have secured a room block at the <b>Holiday Inn Harrisburg/Hershey</b></p>
+        <p> You can reserve a room in our block <a href="https://www.holidayinn.com/redirect?path=hd&brandCode=hi&localeCode=en&regionCode=1&hotelCode=GRVPA&_PMID=99801505&GPC=BWD&viewfullsite=true"> Online</a> or by calling <b>1-866-379-7817</b> and using group code: <b>BWD</B>.
+      </div>
+    </div>
+  </div>            	
+</section>
+ 
