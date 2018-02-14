@@ -431,7 +431,7 @@
 		// 06.2 Countdown
 		//================================================================================
 		var theday = new Date();
-		theday = new Date(2018, 6, 30);
+		theday = new Date(2018, 5, 30);
 		$('.countdown').countdown({
 			until: theday,
 			format: 'DHMS'
